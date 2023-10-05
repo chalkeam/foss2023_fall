@@ -1,0 +1,540 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Site for tutorial for FOSS 2023 students">
+      
+      
+        <meta name="author" content="Arushi Chalke">
+      
+      
+        <link rel="canonical" href="https://chalkeam.github.io/foss2023_fall/Data_Management_Plan/">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>Data Management Plan - FOSS 2023 Fall GitHub Tutorial</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bd3936ea.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-management-plan" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="FOSS 2023 Fall GitHub Tutorial" class="md-header__button md-logo" aria-label="FOSS 2023 Fall GitHub Tutorial" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FOSS 2023 Fall GitHub Tutorial
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Data Management Plan
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CosiMichele/foss23-fall-gitpages" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    foss23-fall-gitpages
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="FOSS 2023 Fall GitHub Tutorial" class="md-nav__button md-logo" aria-label="FOSS 2023 Fall GitHub Tutorial" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    FOSS 2023 Fall GitHub Tutorial
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CosiMichele/foss23-fall-gitpages" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    foss23-fall-gitpages
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-description" class="md-nav__link">
+    Data Description
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-components-of-the-dataset-include" class="md-nav__link">
+    Key components of the dataset include:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-collection" class="md-nav__link">
+    Data Collection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-storage-and-backup" class="md-nav__link">
+    Data Storage and Backup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-organization-and-documentation" class="md-nav__link">
+    Data Organization and Documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-preservation-and-long-term-access" class="md-nav__link">
+    Data Preservation and Long-Term Access
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-sharing-and-access" class="md-nav__link">
+    Data Sharing and Access
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-ethics-and-legal-compliance" class="md-nav__link">
+    Data Ethics and Legal Compliance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roles-and-responsibilities" class="md-nav__link">
+    Roles and Responsibilities
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#budget-and-resources" class="md-nav__link">
+    Budget and Resources
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="data-management-plan">Data Management Plan<a class="headerlink" href="#data-management-plan" title="Permanent link">&para;</a></h1>
+<p><img alt="ABCD Study" src="https://www.nimhd.nih.gov/images/ABCD-logo-high-res_2400x628.jpg" />
+(Image credit CC <a href="https://www.nimhd.nih.gov/programs/collab/abcd-study/">NIH Adolescent Brain Cognitive Development (ABCD) Study</a>)</p>
+<h2 id="data-description">Data Description<a class="headerlink" href="#data-description" title="Permanent link">&para;</a></h2>
+<p>The Adolescent Brain Cognitive Development (ABCD) Study dataset is a comprehensive collection of data related to adolescent brain development, including demographic information, physical activity, substance misuse, and peer and social influences. The dataset includes longitudinal data on a cohort of adolescents, providing valuable insights into the factors that influence brain development during this critical period.</p>
+<h3 id="key-components-of-the-dataset-include">Key components of the dataset include:<a class="headerlink" href="#key-components-of-the-dataset-include" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><em>Demographic Information</em>: This section includes participant age, gender, race/ethnicity, socioeconomic status, and other relevant demographic variables.</p>
+</li>
+<li>
+<p><em>Physical Activity Data</em>: Data on the frequency, duration, and intensity of physical activity among participants.</p>
+</li>
+<li>
+<p><em>Substance Misuse Data</em>: Information on substance use behaviors, including alcohol, tobacco, and illicit drug use, along with the timing and frequency of use.</p>
+</li>
+<li>
+<p><em>Peer and Social Influence Data</em>: Data on peer relationships, social interactions, and peer-related variables that may impact adolescent brain development.</p>
+</li>
+</ol>
+<hr />
+<h2 id="data-collection">Data Collection<a class="headerlink" href="#data-collection" title="Permanent link">&para;</a></h2>
+<p>Data for the ABCD study were collected through a combination of interviews, questionnaires, neuroimaging, and other assessments. The data collection process adhered to standardized protocols to ensure data consistency and quality across all study sites. Research staff, including trained interviewers and neuroimaging technicians, were responsible for collecting and recording data from participants.</p>
+<hr />
+<h2 id="data-storage-and-backup">Data Storage and Backup<a class="headerlink" href="#data-storage-and-backup" title="Permanent link">&para;</a></h2>
+<p>Data collected for the ABCD study are stored securely on dedicated servers and cloud-based platforms with robust security measures. To ensure data integrity and availability, the following storage and backup procedures are in place:</p>
+<ul>
+<li>
+<p><em>Secure Servers</em>: Data is stored on secure servers with restricted access, including encryption and authentication measures.</p>
+</li>
+<li>
+<p><em>Regular Backups</em>: Daily backups of the dataset are performed to prevent data loss due to technical failures or unforeseen events.</p>
+</li>
+<li>
+<p><em>Offsite Backup</em>: Critical data is periodically backed up to an offsite location to protect against physical disasters.</p>
+</li>
+</ul>
+<hr />
+<h2 id="data-organization-and-documentation">Data Organization and Documentation<a class="headerlink" href="#data-organization-and-documentation" title="Permanent link">&para;</a></h2>
+<p>Data organization and documentation are essential to maintain data quality and facilitate future research. The following practices are implemented:</p>
+<ul>
+<li>
+<p><em>Structured Data</em>: Data is organized in a structured format, including databases, spreadsheets, and files, with clear naming conventions.</p>
+</li>
+<li>
+<p><em>Metadata</em>: Detailed metadata, including variable descriptions, units, and data collection procedures, are documented to enhance data understanding.</p>
+</li>
+<li>
+<p><em>Version Control</em>: A version control system is used to track changes to the dataset and associated documentation.</p>
+</li>
+</ul>
+<hr />
+<h2 id="data-preservation-and-long-term-access">Data Preservation and Long-Term Access<a class="headerlink" href="#data-preservation-and-long-term-access" title="Permanent link">&para;</a></h2>
+<p>Preserving the ABCD dataset for long-term access is a priority. The following strategies are in place:</p>
+<ul>
+<li>
+<p><em>Data Preservation</em>: Data will be preserved in a secure and accessible format following best practices for data archiving.</p>
+</li>
+<li>
+<p><em>Data Curation</em>: A designated data curator will oversee data preservation efforts and ensure that the dataset remains accessible and usable.</p>
+</li>
+<li>
+<p><em>Data Accessibility</em>: Access to the dataset will be maintained for authorized researchers, with appropriate permissions and data use agreements.</p>
+</li>
+</ul>
+<hr />
+<h2 id="data-sharing-and-access">Data Sharing and Access<a class="headerlink" href="#data-sharing-and-access" title="Permanent link">&para;</a></h2>
+<p>Data sharing is encouraged to promote scientific collaboration and transparency while safeguarding participant privacy:</p>
+<ul>
+<li>
+<p><em>Data Sharing Policy</em>: Researchers may request access to the ABCD dataset following established data sharing policies, which include ethical and legal considerations.</p>
+</li>
+<li>
+<p><em>Data Access Agreements</em>: Access agreements will be in place to ensure that data users adhere to ethical and legal guidelines and protect participant confidentiality.</p>
+</li>
+</ul>
+<hr />
+<h2 id="data-ethics-and-legal-compliance">Data Ethics and Legal Compliance<a class="headerlink" href="#data-ethics-and-legal-compliance" title="Permanent link">&para;</a></h2>
+<p>Ethical and legal compliance are paramount in handling the ABCD dataset:</p>
+<ul>
+<li>
+<p><em>Informed Consent</em>: Data collection adhered to strict informed consent procedures, and participant anonymity was maintained.</p>
+</li>
+<li>
+<p><em>Ethics Review</em>: All research involving the ABCD dataset is subject to ethics review, and researchers must obtain necessary approvals.</p>
+</li>
+<li>
+<p><em>Legal Compliance</em>: Data handling and sharing comply with relevant data protection and privacy laws.</p>
+</li>
+</ul>
+<hr />
+<h2 id="roles-and-responsibilities">Roles and Responsibilities<a class="headerlink" href="#roles-and-responsibilities" title="Permanent link">&para;</a></h2>
+<p>Clear roles and responsibilities are defined to ensure effective data management:</p>
+<ul>
+<li>
+<p><em>Data Curator</em>: Responsible for data curation, preservation, and access management.</p>
+</li>
+<li>
+<p><em>Data Analysts</em>: Responsible for data analysis and reporting.</p>
+</li>
+<li>
+<p><em>Ethics Review Board</em>: Ensures that research using the dataset follows ethical guidelines.</p>
+</li>
+</ul>
+<hr />
+<h2 id="budget-and-resources">Budget and Resources<a class="headerlink" href="#budget-and-resources" title="Permanent link">&para;</a></h2>
+<p>Funding and resources for data management, storage, curation, and sharing are allocated as follows:</p>
+<ul>
+<li>
+<p><em>Data Management Personnel</em>: Salary and resources for data curators and analysts.</p>
+</li>
+<li>
+<p><em>Data Storage and Security</em>: Budget for secure data storage, backups, and security measures.</p>
+</li>
+<li>
+<p><em>Data Sharing Infrastructure</em>: Resources for establishing and maintaining a data sharing platform.</p>
+</li>
+<li>
+<p><em>Ethics Review</em>: Funding for ethics review processes and compliance.</p>
+</li>
+</ul>
+<hr />
+<p>Arushi Chalke</p>
+<p>FOSS Fall 2023</p>
+<p>Last update: 09/26/2023</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      2023-10-05
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 - 2024
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+    
+  </body>
+</html>
